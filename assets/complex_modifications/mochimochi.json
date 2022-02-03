@@ -1,10 +1,21 @@
 {
-  "title": "Left ctrl + hjkl to Arrow Keys Vim Vim スタイルのキーバインドを提供する ターミナルアプリでは無効にしたい",
+  "title": "Left ctrl + hjkl to Arrow Keys Vim Vim スタイルのキーバインドを提供する ターミナルアプリをしようしているときは無効化される。",
   "rules": [
     {
-      "description": "Left ctrl + hjkl to arrow keys Vim",
+      "description": "Left ctrl + hjkl to arrow keys Vim  terminal.app iterm.app kitty.term では無効化される",
       "manipulators": [
         {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "net.kovidgoyal.kitty"
+              ],
+              "type": "frontmost_application_unless",
+              "description": "terminal.app iterm.app kitty.app を使用しているときは無効化"
+            }
+          ],
           "from": {
             "key_code": "h",
             "modifiers": {
@@ -20,6 +31,17 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "net.kovidgoyal.kitty"
+              ],
+              "type": "frontmost_application_unless",
+              "description": "terminal.app iterm.app kitty.app を使用しているときは無効化"
+            }
+          ],
           "from": {
             "key_code": "j",
             "modifiers": {
@@ -35,6 +57,17 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "net.kovidgoyal.kitty"
+              ],
+              "type": "frontmost_application_unless",
+              "description": "terminal.app iterm.app kitty.app を使用しているときは無効化"
+            }
+          ],
           "from": {
             "key_code": "k",
             "modifiers": {
@@ -50,6 +83,17 @@
           "type": "basic"
         },
         {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "net.kovidgoyal.kitty"
+              ],
+              "type": "frontmost_application_unless",
+              "description": "terminal.app iterm.app kitty.app を使用しているときは無効化"
+            }
+          ],
           "from": {
             "key_code": "l",
             "modifiers": {
